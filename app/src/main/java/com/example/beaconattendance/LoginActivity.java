@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView textViewRegister;
     SharedPreferences sharedpreferences;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +76,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.textViewRegister:
                 startActivity(new Intent(this, MainActivity.class));
                 break;
+                default:
+                    //no default case
         }
     }
 

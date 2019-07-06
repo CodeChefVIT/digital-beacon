@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tvlogin;
     private String macAddress;
     private WifiManager wifiManager;
+    private int count=0;
 
 
     @Override
@@ -53,9 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (wifiManager.isWifiEnabled()) {
 
+            count=1;
 
         }else {
 
+            count=0;
         }
 
         macAddress= "192.168.43.117";
@@ -157,6 +160,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tvlogin:
                 userSignIn();
                 break;
+            default:
+                    //Do nothing
         }
     }
 
